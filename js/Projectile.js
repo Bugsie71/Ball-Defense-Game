@@ -26,7 +26,7 @@ class Projectile {
             if (this.activePowerUp.includes("Damage Increase")) {
                 this.damage *= 3;
                 this.red = 255;
-            } 
+            }
             if (this.activePowerUp.includes("Double Tap")) {
                 this.green = 255;
             }
@@ -38,9 +38,9 @@ class Projectile {
                 this.activePowerUp.includes("Double Tap") &&
                 this.activePowerUp.includes("Spread Shot")
             ) {
-                this.red = Math.floor(Math.random() * 255)
-                this.green = Math.floor(Math.random() * 255)
-                this.blue = Math.floor(Math.random() * 255)
+                this.red = Math.floor(Math.random() * 255);
+                this.green = Math.floor(Math.random() * 255);
+                this.blue = Math.floor(Math.random() * 255);
             }
         }
         this.color = `rgba(${this.red}, ${this.green}, ${this.blue}, ${this.alpha})`;

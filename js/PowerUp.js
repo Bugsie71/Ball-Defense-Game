@@ -5,7 +5,7 @@ class PowerUp {
         this.screenTime = 15;
         this.x = x;
         this.y = y;
-		this.radius = 20;
+        this.radius = 20;
         this.red = 255;
         this.green = 255;
         this.blue = 255;
@@ -14,10 +14,10 @@ class PowerUp {
     }
 
     giveType() {
-        const types = ['Damage Increase' ,'Double Tap', 'Spread Shot']
-        this.type = types[Math.floor(Math.random() * types.length)]
+        const types = ["Damage Increase", "Double Tap", "Spread Shot"];
+        this.type = types[Math.floor(Math.random() * types.length)];
     }
-    
+
     draw() {
         c.fillStyle = this.color;
         c.beginPath();

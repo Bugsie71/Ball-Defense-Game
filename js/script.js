@@ -15,7 +15,7 @@ const scoreSpan = document.querySelectorAll(".score");
 let level = 0;
 const levelSpan = document.querySelectorAll(".level");
 
-const levelAmount = 75
+const levelAmount = 75;
 const player = new Player();
 const enemies = [];
 const projectiles = [];
@@ -146,9 +146,9 @@ function startGame(gameActive) {
 
 function startNextLevelWhenCompleted() {
     if (enemies.length === 0 && gameActive) {
-        const nextLevel = ++level
+        const nextLevel = ++level;
         if (nextLevel === levelAmount + 1) {
-            endGame('won')
+            endGame("won");
         }
         startLevel(nextLevel);
         activePowerUp = [];
@@ -158,13 +158,15 @@ function startNextLevelWhenCompleted() {
     }
 }
 
-function endGame(status = 'lost') {
+function endGame(status = "lost") {
     gameActive = false;
 
-    if (status === 'won') {
-        const gameOverContainer = document.querySelector('.game-over-container')
-        level = 75
-        gameOverContainer.innerHTML = "You Won! GG's!"
+    if (status === "won") {
+        const gameOverContainer = document.querySelector(
+            ".game-over-container"
+        );
+        level = 75;
+        gameOverContainer.innerHTML = "You Won! GG's!";
     }
 
     scoreContainer.style.display = "none";
@@ -247,7 +249,12 @@ function applyPowerUp(powerUp) {
     }, powerUp.duration * 1000);
 }
 
-function spawnPowerUp(amount = 1, type = 'random', levelSeconds = secondsPerLevel, radius = powerUpRadius) {
+function spawnPowerUp(
+    amount = 1,
+    type = "random",
+    levelSeconds = secondsPerLevel,
+    radius = powerUpRadius
+) {
     for (let i = 0; i < amount; i++) {
         const spawnLocation = getSpawnLocation(radius);
         let x = spawnLocation[0];
@@ -261,7 +268,7 @@ function spawnPowerUp(amount = 1, type = 'random', levelSeconds = secondsPerLeve
             powerUps.push(powerUp);
             powerUp.giveType();
 
-            if (type !== 'random') {
+            if (type !== "random") {
                 powerUp.type = type;
             }
 
@@ -275,13 +282,13 @@ function spawnPowerUp(amount = 1, type = 'random', levelSeconds = secondsPerLeve
                 });
 
             setTimeout(() => {
-                if (powerUps.indexOf(powerUp) !== -1 ) {
+                if (powerUps.indexOf(powerUp) !== -1) {
                     const index = powerUps.indexOf(powerUp);
                     powerUps.splice(index, 1);
                 }
             }, powerUp.screenTime * 1000);
-        }, (levelSeconds === secondsPerLevel ? Math.random() * secondsPerLevel / 1.25 : Math.random() * levelSeconds) * 1000
-    )}
+        }, (levelSeconds === secondsPerLevel ? (Math.random() * secondsPerLevel) / 1.25 : Math.random() * levelSeconds) * 1000);
+    }
 }
 
 // Enemy Functions
@@ -324,14 +331,14 @@ function spawnCustomEnemy(
     radius,
     speedMultiplier,
     levelSeconds,
-    colorRGBA = {red: 255, green: 0, blue: 0, alpha: 1},
-    difficultyMultiplier = 100,
+    colorRGBA = { red: 255, green: 0, blue: 0, alpha: 1 },
+    difficultyMultiplier = 100
 ) {
     for (let i = 0; i < amount; i++) {
-        const customEnemy = getEnemy(['custom'], difficultyMultiplier, radius)
+        const customEnemy = getEnemy(["custom"], difficultyMultiplier, radius);
 
         for (let color in colorRGBA) {
-            customEnemy[color] = colorRGBA[color]
+            customEnemy[color] = colorRGBA[color];
         }
 
         customEnemy.velocityMultiplier = speedMultiplier;

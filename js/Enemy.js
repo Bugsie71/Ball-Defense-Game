@@ -24,55 +24,55 @@ class Enemy {
     }
 
     applyEnemyType() {
-        let maxVelocityMultiplier, maxRadiusSize
-        const prevVelocityMultiplier = this.velocityMultiplier
-        const prevRadius = this.radius
+        let maxVelocityMultiplier, maxRadiusSize;
+        const prevVelocityMultiplier = this.velocityMultiplier;
+        const prevRadius = this.radius;
 
         if (this.type.includes("fast")) {
             this.velocityMultiplier *= 1.5;
-            maxVelocityMultiplier = this.velocityMultiplier
+            maxVelocityMultiplier = this.velocityMultiplier;
 
             if (this.radius / 2 > 10) {
-                this.radius = (this.radius / 2) * this.radiusMultiplier 
+                this.radius = (this.radius / 2) * this.radiusMultiplier;
             } else {
-                this.radius = 10
+                this.radius = 10;
             }
-            this.green = 255
+            this.green = 255;
         }
-        
+
         if (this.type.includes("big")) {
             this.radiusMultiplier *= 1.5;
             this.radius = this.radius * this.radiusMultiplier;
-            this.minimumRadius *= 2
-            maxRadiusSize = prevRadius * this.radiusMultiplier
+            this.minimumRadius *= 2;
+            maxRadiusSize = prevRadius * this.radiusMultiplier;
 
             this.velocityMultiplier /= 2;
-            this.blue = 255
+            this.blue = 255;
         }
 
         if (this.type.includes("ghost")) {
-            this.alpha = 0.2 / this.difficultyMultiplier
+            this.alpha = 0.2 / this.difficultyMultiplier;
             if (!this.type.includes("big")) {
-                this.minimumRadius *= 2
+                this.minimumRadius *= 2;
             }
-            
+
             if (this.radius <= this.minimumRadius) {
-                this.radius *= 2
+                this.radius *= 2;
             }
         }
 
-        if (this.type.includes('big') && this.type.includes('fast')) {
-            this.velocityMultiplier = maxVelocityMultiplier
-            this.radius = maxRadiusSize
+        if (this.type.includes("big") && this.type.includes("fast")) {
+            this.velocityMultiplier = maxVelocityMultiplier;
+            this.radius = maxRadiusSize;
         }
 
-        if (this.type.includes('normal')) {
+        if (this.type.includes("normal")) {
             if (maxVelocityMultiplier) {
-                this.radius = prevRadius
+                this.radius = prevRadius;
             } else if (maxRadiusSize) {
-                this.velocityMultiplier = prevVelocityMultiplier
+                this.velocityMultiplier = prevVelocityMultiplier;
             }
-            this.red = 255
+            this.red = 255;
         }
 
         this.color = `rgba(${this.red}, ${this.green}, ${this.blue}, ${this.alpha})`;

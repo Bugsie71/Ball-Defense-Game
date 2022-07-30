@@ -34,7 +34,7 @@ function startLevel(level) {
         spawnEnemy(["normal"], 6);
     }
     if (level === 10) {
-        secondsPerLevel = 3
+        secondsPerLevel = 3;
         displayAnnoucement("Boss Battle: Ant Army", 3);
         spawnCustomEnemy(30, 10, 1, 3);
     }
@@ -206,13 +206,18 @@ function startLevel(level) {
         displayAnnoucement("Boss Battle: Assassin's", 3);
         spawnEnemy(["normal"], 30);
         spawnEnemy(["normal", "ghost"], 20);
-        spawnCustomEnemy(10, 20, 2, secondsPerLevel, {red: 5, green: 5, blue: 5, alpha: 0.3})
-        spawnPowerUp(1, 'Double Tap');
+        spawnCustomEnemy(10, 20, 2, secondsPerLevel, {
+            red: 5,
+            green: 5,
+            blue: 5,
+            alpha: 0.3,
+        });
+        spawnPowerUp(1, "Double Tap");
     }
     if (level === 41) {
         spawnEnemy(["normal"], 30);
         spawnEnemy(["normal", "ghost"], 30);
-        spawnPowerUp()
+        spawnPowerUp();
     }
     if (level === 42) {
         spawnEnemy(["normal"], 30);
@@ -224,12 +229,12 @@ function startLevel(level) {
         spawnEnemy(["normal"], 30);
         spawnEnemy(["fast"], 20);
         spawnEnemy(["normal", "ghost"], 30);
-        spawnPowerUp(2, 'Spread Shot');
+        spawnPowerUp(2, "Spread Shot");
     }
     if (level === 44) {
         spawnEnemy(["normal"], 30);
         spawnEnemy(["fast"], 20);
-        spawnEnemy(['big'], 10)
+        spawnEnemy(["big"], 10);
         spawnEnemy(["normal", "ghost"], 30);
         spawnPowerUp(2, "Spread Shot");
         spawnPowerUp(1, "Double Tap");
@@ -251,7 +256,7 @@ function startLevel(level) {
         spawnPowerUp(2);
     }
     if (level === 47) {
-        spawnEnemy(['normal' ,"ghost"], 25);
+        spawnEnemy(["normal", "ghost"], 25);
         spawnEnemy(["big"], 25);
         spawnPowerUp(2);
     }
@@ -266,9 +271,9 @@ function startLevel(level) {
         spawnPowerUp(2);
     }
     if (level === 50) {
-        displayAnnoucement("Challenge Level: They are Evolving...", 3)
-        spawnEnemy(['normal', 'fast'], 3)
-        spawnEnemy(['normal', 'big'], 3)
+        displayAnnoucement("Challenge Level: They are Evolving...", 3);
+        spawnEnemy(["normal", "fast"], 3);
+        spawnEnemy(["normal", "big"], 3);
         spawnEnemy(["fast"], 10);
         spawnEnemy(["normal"], 10);
         spawnEnemy(["big"], 10);
@@ -284,9 +289,9 @@ function startLevel(level) {
         spawnEnemy(["normal", "fast"], 10);
     }
     if (level === 53) {
-        spawnEnemy(["normal", 'ghost'], 10);
-        spawnEnemy(["big", 'ghost'], 10);
-        spawnEnemy(["normal", "big", 'ghost'], 10);
+        spawnEnemy(["normal", "ghost"], 10);
+        spawnEnemy(["big", "ghost"], 10);
+        spawnEnemy(["normal", "big", "ghost"], 10);
     }
     if (level === 54) {
         spawnEnemy(["normal", "ghost"], 10);
@@ -295,8 +300,8 @@ function startLevel(level) {
     }
     if (level === 55) {
         secondsPerLevel = 15;
-        displayAnnoucement('Challenge Level: Big and Fast?!?!', 3)
-        spawnEnemy(['big', 'fast'], 10)
+        displayAnnoucement("Challenge Level: Big and Fast?!?!", 3);
+        spawnEnemy(["big", "fast"], 10);
     }
     if (level === 56) {
         spawnEnemy(["normal"], 20);
@@ -340,14 +345,13 @@ function startLevel(level) {
         spawnPowerUp(1, "Damage Increase", 3);
     }
     if (level === 61) {
-        secondsPerLevel = 30
+        secondsPerLevel = 30;
         spawnEnemy(["fast"], 40);
         spawnEnemy(["normal", "ghost"], 20);
         spawnEnemy(["normal", "fast"], 20);
         spawnEnemy(["fast", "big"], 10);
         spawnEnemy(["ghost", "fast", "big"], 10);
         spawnPowerUp(6);
-        
     }
     if (level === 62) {
         spawnEnemy(["normal"], 50);
@@ -374,7 +378,7 @@ function startLevel(level) {
     if (level === 65) {
         secondsPerLevel = 1;
         displayAnnoucement("Boss Battle: X to ) ( to > <", 3);
-        spawnCustomEnemy(80, 20, 3)
+        spawnCustomEnemy(80, 20, 3);
     }
     if (level === 66) {
         secondsPerLevel = 30;
@@ -409,26 +413,42 @@ function startLevel(level) {
     }
     if (level === 70) {
         secondsPerLevel = 60;
-        displayAnnoucement("Take a Minute Break, You're going to need it...", 10);
+        displayAnnoucement(
+            "Take a Minute Break, You're going to need it...",
+            10
+        );
         spawnEnemy(["normal"], 30);
     }
     if (level === 71) {
         secondsPerLevel = 30;
-        displayAnnoucement('Boss Battle: Perfect Aim', 3)
-        spawnCustomEnemy(30, 3, 3, secondsPerLevel, {red: 0, green: 255, blue: 0, alpha: 1})
+        displayAnnoucement("Boss Battle: Perfect Aim", 3);
+        spawnCustomEnemy(30, 3, 3, secondsPerLevel, {
+            red: 0,
+            green: 255,
+            blue: 0,
+            alpha: 1,
+        });
     }
     if (level === 72) {
         secondsPerLevel = 30;
-        displayAnnoucement('Boss Battle: Reaction Time', 3)
-        spawnCustomEnemy(40, 10, 8, secondsPerLevel, {red: 0, green: 255, blue: 0, alpha: 1})
+        displayAnnoucement("Boss Battle: Reaction Time", 3);
+        spawnCustomEnemy(40, 10, 8, secondsPerLevel, {
+            red: 0,
+            green: 255,
+            blue: 0,
+            alpha: 1,
+        });
     }
     if (level === 73) {
-        secondsPerLevel = 30
-        displayAnnoucement('Boss Battle: "Please Help" -Your Fingers & Forearm', 5)
+        secondsPerLevel = 30;
+        displayAnnoucement(
+            'Boss Battle: "Please Help" -Your Fingers & Forearm',
+            5
+        );
         spawnEnemy(["big"], 40);
-        spawnEnemy(["big", 'normal'], 20);
-        spawnEnemy(["big", 'fast'], 10);
-        spawnPowerUp(6, 'Double Tap')
+        spawnEnemy(["big", "normal"], 20);
+        spawnEnemy(["big", "fast"], 10);
+        spawnPowerUp(6, "Double Tap");
     }
     if (level === 74) {
         displayAnnoucement("Boss Battle: One man Army");
@@ -449,7 +469,12 @@ function startLevel(level) {
     if (level === 75) {
         displayAnnoucement("Final Boss: Zeus and his Army", 5);
         secondsPerLevel = 60;
-        spawnCustomEnemy(1, 1000, 2, 30, {red: 255, green: 255, blue: 255, alpha: 1})
+        spawnCustomEnemy(1, 1000, 2, 30, {
+            red: 255,
+            green: 255,
+            blue: 255,
+            alpha: 1,
+        });
         spawnEnemy(["normal"], 30);
         spawnEnemy(["fast"], 30);
         spawnEnemy(["big"], 30);
@@ -465,7 +490,7 @@ function startLevel(level) {
     }
 
     if (level === 76) {
-        endGame()
+        endGame();
     }
 
     setTimeout(() => {

@@ -1,88 +1,89 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 
-*, *::before, *::after {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 body {
-	position: relative;
-	display: flex;
-	justify-content: center;
-	font-family: 'Noto Sans', sans-serif;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    font-family: "Noto Sans", sans-serif;
 }
 
 canvas {
-	cursor: crosshair;
+    cursor: crosshair;
 }
 
 .score-container {
-	position: fixed;
-	color: white;
-	font-size: 2em;
-	top: 10px;
-	left: 20px;
-	pointer-events: none;
-	user-select: none;
+    position: fixed;
+    color: white;
+    font-size: 2em;
+    top: 10px;
+    left: 20px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .level-container {
-	position: fixed;
-	color: white;
-	font-size: 2em;
-	margin-top: 10px;
-	pointer-events: none;
-	user-select: none;
+    position: fixed;
+    color: white;
+    font-size: 2em;
+    margin-top: 10px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .end-game-container {
-	display: none;
-	flex-direction: column;
-	text-align: center;
-	position: fixed;
-	background-color: white;
-	border-radius: 5px;
-	font-size: 2em;
-	margin-top: 50px;
-	padding: 10px 20px;
-	pointer-events: none;
-	user-select: none;
+    display: none;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 2em;
+    margin-top: 50px;
+    padding: 10px 20px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .end-game-container button {
-	background-color: dodgerblue;
-	color: white;
-	font-size: .75em;
-	border: none;
-	border-radius: 5px;
-	margin-top: 10px;
-	padding: 5px;
-	cursor: pointer;
-	pointer-events: auto;
+    background-color: dodgerblue;
+    color: white;
+    font-size: 0.75em;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px;
+    cursor: pointer;
+    pointer-events: auto;
 }
 
 .end-game-container button:hover {
-	background-color: rgba(30, 143, 255, 0.9);
+    background-color: rgba(30, 143, 255, 0.9);
 }
 
 .announcement-container {
-
-	flex-direction: column;
-	text-align: center;
-	position: fixed;
-	color: white;
-	font-weight: bold;
-	border-radius: 5px;
-	font-size: 1.25em;
-	margin-top: 100px;
-	padding: 5px 10px;
-	pointer-events: none;
-	user-select: none;
+    flex-direction: column;
+    text-align: center;
+    position: fixed;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    font-size: 1.25em;
+    margin-top: 100px;
+    padding: 5px 10px;
+    pointer-events: none;
+    user-select: none;
 }
 
 .game-over-container {
-	font-weight: bold;
-	font-size: 1.5em;
+    font-weight: bold;
+    font-size: 1.5em;
 }
