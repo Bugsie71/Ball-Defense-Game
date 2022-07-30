@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Ball Defense Game</title>
+</head>
+<body>
+	<div class="score-container">Score: <span class="score">0</span></div>
+	<div class="level-container">Level: <span class="level">1</span></div>
+	<div class="end-game-container">
+		<div class="game-over-container">Game Over!</div>
+		<div>Final Score: <span class="score">0</span></div>
+		<div>You made it to Level: <span class="level">1</span></div>
+		<button id="restart-game">Try Again</button>
+	</div>
+	<div class="announcement-container"></div>
+	<canvas id="canvas"></canvas>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+	<script src="js/Player.js"></script>
+	<script src="js/Enemy.js"></script>
+	<script src="js/Projectile.js"></script>
+	<script src="js/Particle.js"></script>
+	<script src="js/PowerUp.js"></script>
+	<script src="js/levels.js"></script>
+	<script src="js/script.js"></script>
+</body>
+</html>
